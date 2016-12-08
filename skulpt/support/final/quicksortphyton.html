@@ -197,38 +197,38 @@
       <h1> Full Code </h1>
 
       <br>def quickSort(alist):
-      <br>&nbsp; quickSortHelper(alist,0,len(alist)-1);
-
+      <br>&nbsp;quickSortHelper(alist,0,len(alist)-1);
+      <br>
       <br>def quickSortHelper(alist,first,last):
-      <br>&nbsp; "if first<last:"
-      <br>&nbsp; splitpoint = partition(alist,first,last);
-      <br>&nbsp; quickSortHelper(alist,first,splitpoint-1);
-      <br>&nbsp; quickSortHelper(alist,splitpoint+1,last);
-
-
+      <br>&nbsp;if first<last:
+      <br>&nbsp;&nbsp;splitpoint = partition(alist,first,last);
+      <br>&nbsp;&nbsp;quickSortHelper(alist,first,splitpoint-1);
+      <br>&nbsp;&nbsp;quickSortHelper(alist,splitpoint+1,last);
+      <br>  
       <br>def partition(alist,first,last):
-      <br>&nbsp;   pivotvalue = alist[first];
-      <br>&nbsp;   leftmark = first+1;
-      <br>&nbsp;   rightmark = last;
-      <br>&nbsp;   done = False;
-
-      <br>   while not done:
-      <br>&nbsp;       while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
-      <br>&nbsp;&nbsp;           leftmark = leftmark + 1;
-
-      <br>&nbsp;       while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
-      <br>&nbsp;&nbsp;           rightmark = rightmark -1;
-
-      <br>&nbsp; if rightmark < leftmark:
-      <br>&nbsp;&nbsp;  done = True;
-      <br>&nbsp; else:
-      <br>&nbsp;&nbsp;  temp = alist[leftmark];
-      <br>&nbsp;&nbsp;  alist[leftmark] = alist[rightmark];
-      <br>&nbsp;&nbsp;  alist[rightmark] = temp;
-
+      <br>&nbsp;pivotvalue = alist[first];
+      <br>&nbsp;leftmark = first+1;
+      <br>&nbsp;rightmark = last;
+      <br>&nbsp;done = False;
+      <br>
+      <br>&nbsp;while not done:
+      <br>&nbsp;&nbsp;while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
+      <br>&nbsp;&nbsp;&nbsp;leftmark = leftmark + 1;
+      <br>
+      <br>&nbsp;&nbsp;while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
+      <br>&nbsp;&nbsp;&nbsp;rightmark = rightmark -1;
+      <br>
+      <br>&nbsp;&nbsp;if rightmark < leftmark:
+      <br>&nbsp;&nbsp;&nbsp;done = True;
+      <br>&nbsp;&nbsp;else:
+      <br>&nbsp;&nbsp;&nbsp;temp = alist[leftmark];
+      <br>&nbsp;&nbsp;&nbsp;alist[leftmark] = alist[rightmark];
+      <br>&nbsp;&nbsp;&nbsp;alist[rightmark] = temp;
+      <br>  
       <br>&nbsp; temp = alist[first];
       <br>&nbsp; alist[first] = alist[rightmark];
       <br>&nbsp; alist[rightmark] = temp;
+      <br>
       <br>&nbsp; return rightmark;
 
       <br> alist = [54,26,93,17,77,31,44,55,20];
