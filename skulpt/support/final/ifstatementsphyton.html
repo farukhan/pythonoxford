@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>E-learning</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+  
+    <script type="text/javascript" src="../../support/time-helpers/strftime-min.js"></script>
+	<script type="text/javascript" src="../../support/time-helpers/strptime.min.js"></script>
+	<script type="text/javascript" src="../../support/closure-library/closure/goog/base.js"></script>
+	<script type="text/javascript" src="../../support/closure-library/closure/goog/deps.js"></script>
+	<script type="text/javascript" src="../../src/env.js"></script>
+	<script type="text/javascript" src="../../src/type.js"></script>
+	<script type="text/javascript" src="../../src/abstract.js"></script>
+	<script type="text/javascript" src="../../src/object.js"></script>
+	<script type="text/javascript" src="../../src/function.js"></script>
+	<script type="text/javascript" src="../../src/builtin.js"></script>
+	<script type="text/javascript" src="../../src/fromcodepoint.js"></script>
+	<script type="text/javascript" src="../../src/errors.js"></script>
+	<script type="text/javascript" src="../../src/native.js"></script>
+	<script type="text/javascript" src="../../src/method.js"></script>
+	<script type="text/javascript" src="../../src/misceval.js"></script>
+	<script type="text/javascript" src="../../src/seqtype.js"></script>
+	<script type="text/javascript" src="../../src/list.js"></script>
+	<script type="text/javascript" src="../../src/str.js"></script>
+	<script type="text/javascript" src="../../src/formatting.js"></script>
+	<script type="text/javascript" src="../../src/tuple.js"></script>
+	<script type="text/javascript" src="../../src/dict.js"></script>
+	<script type="text/javascript" src="../../src/numtype.js"></script>
+	<script type="text/javascript" src="../../src/biginteger.js"></script>
+	<script type="text/javascript" src="../../src/int.js"></script>
+	<script type="text/javascript" src="../../src/bool.js"></script>
+	<script type="text/javascript" src="../../src/float.js"></script>
+	<script type="text/javascript" src="../../src/number.js"></script>
+	<script type="text/javascript" src="../../src/long.js"></script>
+	<script type="text/javascript" src="../../src/complex.js"></script>
+	<script type="text/javascript" src="../../src/slice.js"></script>
+	<script type="text/javascript" src="../../src/set.js"></script>
+	<script type="text/javascript" src="../../src/print.js"></script>
+	<script type="text/javascript" src="../../src/module.js"></script>
+	<script type="text/javascript" src="../../src/structseq.js"></script>
+	<script type="text/javascript" src="../../src/generator.js"></script>
+	<script type="text/javascript" src="../../src/file.js"></script>
+	<script type="text/javascript" src="../../src/ffi.js"></script>
+	<script type="text/javascript" src="../../src/iterator.js"></script>
+	<script type="text/javascript" src="../../src/enumerate.js"></script>
+	<script type="text/javascript" src="../../src/tokenize.js"></script>
+	<script type="text/javascript" src="../../gen/parse_tables.js"></script>
+	<script type="text/javascript" src="../../src/parser.js"></script>
+	<script type="text/javascript" src="../../gen/astnodes.js"></script>
+	<script type="text/javascript" src="../../src/ast.js"></script>
+	<script type="text/javascript" src="../../src/symtable.js"></script>
+	<script type="text/javascript" src="../../src/compile.js"></script>
+	<script type="text/javascript" src="../../src/import.js"></script>
+	<script type="text/javascript" src="../../src/timsort.js"></script>
+	<script type="text/javascript" src="../../src/sorted.js"></script>
+	<script type="text/javascript" src="../../src/builtindict.js"></script>
+	<script type="text/javascript" src="../../src/constants.js"></script>
+	<script type="text/javascript" src="../../src/internalpython.js"></script>
+	<script type="text/javascript" src="../../support/jsbeautify/beautify.js"></script>
+    <script src="skulpt-stdlib.js" type="text/javascript"></script>
+  </head>
+  
+  <body>
+    
+	<!--
+      <a class="navbar-brand" href="elearning.jpg">
+        <img alt="Brand" src="">
+      </a>
+   -->
+   
+   <nav class="navbar navbar-default">
+	<div class="container-fluid">
+  	 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+		 <a  target='_blank'><img src='img/logo1.png' border='0' alt="logo icon full colour" /></a>
+		 <a class="navbar-brand" href="index.html">E-learning</a>
+	  </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav container-fluid">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  
+	</div><!-- /.container-fluid -->
+  </nav>
+
+<!-- Jumbotron -->
+
+<div class="container text-center">
+<div class="jumbotron">
+<h1>Python </h1>
+
+<p>Python is a programming language that is used by many professional coders </p>
+<a href ="#" class="btn btn-lg btn-success"> LOGIN/SIGNUP </a>
+</div>
+<div class="row">
+<div class="col-md-12">
+<a href="#" class=thumbnail">
+<img src="img/python.png" alt="Tutorials">
+</a>
+
+<div class="col-md-12">
+<h2> How to print if statements in Phyton</h2>
+<br> message = "Today's activity" --  (the message will be starting with  “Today’s activity” at the end when its executed ) </br>
+<br> print ("Please enter the temperature :\n") --  (it will print “Please enter the temperature” )  </br>
+<br> entered_value = input ()  --  (User will be prompted to enter a value) (</br>
+<br> if int(entered_value) > 30:  -- (if the entered value greater than 30) </br>
+   <br> message = message + "swimming"  -- (today’s activity equals to swimming)</br>
+<br> elif int(entered_value) > 20: -- (if the value is greater than 20 but less than 30) </br>
+  <br> message = message + "tennis" --  (todays’s activity equals to tennis) </br>
+<br> else : message = message + "sleeping"  -- (otherwise anything else equals to  sleeping) </br>
+<br> print message – (the message will be printed with appropriate sections) </br>
+<h1> Full Code </h1>
+<br>
+message = "Today's activity";
+<br>
+print ("Please enter the temperature :\n");
+<br>
+entered_value = input ();
+<br>
+if int(entered_value) > 30:
+<br>
+&nbsp; message = message + "swimming";
+<br>
+elif int(entered_value) > 20:
+<br>
+&nbsp; message = message + "tennis";
+<br>
+else : message = message + "sleeping";
+<br>
+print message;
+</br>
+<br> Please make sure the code is lower cased and try to change the code to print different words or sentences.</br>
+ 
+<script type="text/javascript">
+function outf(text) {
+   var mypre = document.getElementById(Sk.pre);
+   mypre.innerHTML = mypre.innerHTML + text;
+}
+
+function showjs(text) {
+   var mypre = document.getElementById("runbrowser_jsout");
+   mypre.innerHTML = mypre.innerHTML + text;
+}
+
+
+function builtinRead(x) {
+    console.log(x);
+    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+        throw "File not found: '" + x + "'";
+    }
+
+    var file = Sk.builtinFiles["files"][x];
+
+    if (!file) {
+        return new Promise(function (accept, reject) {
+            function reqListener () {
+                console.log(this);
+                console.log(arguments)
+                accept(this.responseText);
+            }
+
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", reqListener);
+            oReq.open("GET", "" + file);
+            oReq.send();
+        });
+    }
+
+    return file;
+}
+
+function runit(myDiv) {
+   var prog = document.getElementById(myDiv+"_code").value;
+   var mypre = document.getElementById(myDiv+"_pre");
+
+   Sk.inputfun = function(prompt) {
+       return new Promise(function (resolve) { resolve(window.prompt(prompt)); });
+   };
+   //Sk.outputfun = alert;
+
+   mypre.innerHTML = '';
+   Sk.canvas = myDiv+"_canvas";
+    var can = document.getElementById(Sk.canvas);
+    can.style.display = 'block';
+    if (can) {
+        can.width = can.width;
+        if (Sk.tg) {
+            Sk.tg.canvasInit = false;
+            Sk.tg.turtleList = [];
+        }
+    }
+
+    Sk.pre = myDiv+"_pre";
+    Sk.configure({
+        output:outf,
+        read: builtinRead,
+        inputfunTakesPrompt: true,
+        debugout: showjs,
+        debugging: false
+    });
+
+    var myPromise = Sk.misceval.asyncToPromise(function() {
+            return Sk.importMainWithBody("<stdin>",true,prog,true);
+    });
+
+    myPromise.then(function(mod) {}, function(err) {
+        console.log(err.toString());
+    });
+}
+</script>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div id="runbrowser">
+<form>
+<textarea edit_id="eta_5" id="runbrowser_code" cols="72" rows="20" style="font-family: 'Lucida Console', Monaco, monospace;">
+
+</textarea>
+<button onclick="runit('runbrowser')" type="button">Run</button>
+</form>
+
+<h3>Canvas</h3>
+<div id="runbrowser_canvas" height="500" width="800"
+	style="border-style: solid; display: none"></div>
+
+<h3>Output</h3>
+<pre id="runbrowser_pre" style="background-color: #dddddd"></pre>
+
+<h3>Compiled To Javascript</h3>
+<pre id="runbrowser_jsout"></pre>
+
+</div>
+
+
+
+<!-- footer -->
+
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<a  target='_blank'><img src='http://s10.postimg.org/4zsm2npph/logo_icon_full_colour.png' border='0' alt="logo icon full colour" /></a>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">E-learning &copy; 2016</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span> Road</span>  UK</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>Hey</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="#"></a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+	
+	
+	<!-- 
+	<div class="container">
+	<div class="row">
+	<div class="col-md-10">
+	<p> hello  how are you what is you name my name is john nice to met you see you all soon</p>
+	</div>
+	
+	
+	
+	
+	</div>
+	</div>
+	-->
+	
+	
+
+	
+	
+	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+
+  </html>
