@@ -161,17 +161,17 @@
 <h2> Total Words</h2>
 <p> In this section, we will see with an example on how to print user inserted word in total </p>
 
-<br>import string;</br>
+<br>import string;
 <br>&nbsp;def is_word(text):
 <br>&nbsp;&nbsp;for char in text:
 <br>&nbsp;&nbsp;&nbsp;if not char in string.punctuation:
 <br>&nbsp;&nbsp;&nbsp;&nbsp;return True;
 <br>&nbsp;&nbsp;return False;
 <br>&nbsp;def word_count(value, output = 0):
-<br>&nbsp;&nbsp;potential_words = value.split(" ")
-<br>&nbsp;&nbsp;&nbsp;for word in potential_words:
-<br>&nbsp;&nbsp;&nbsp;&nbsp;if is_word(word):
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output += 1;
+<br>&nbsp;&nbsp;potential_words = value.split(" ");
+<br>&nbsp;&nbsp;for word in potential_words:
+<br>&nbsp;&nbsp;&nbsp;if is_word(word):
+<br>&nbsp;&nbsp;&nbsp;&nbsp;output += 1;
 <br>&nbsp;&nbsp;return output;
 <br>text = raw_input("Tell something: ");
 <br>print(word_count(text);
