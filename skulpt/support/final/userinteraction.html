@@ -174,7 +174,6 @@
                mypre.innerHTML = mypre.innerHTML + text;
             }
 
-
             function builtinRead(x) {
                 console.log(x);
                 if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
@@ -241,6 +240,8 @@
             }
           </script>
 
+          <br>
+
           <div id="runbrowser">
             <form>
               <textarea edit_id="eta_5" id="runbrowser_code" cols="72" rows="20" style="font-family: 'Lucida Console', Monaco, monospace;"/>
@@ -255,7 +256,7 @@
             <pre id="runbrowser_pre" style="background-color: #dddddd"></pre>
 
             <h3 style="display:none">Compiled To Javascript</h3>
-            <pre id="runbrowser_jsout" style="display:none"></pre
+            <pre id="runbrowser_jsout" style="display:none"></pre>
           </div>
 
         </div>
