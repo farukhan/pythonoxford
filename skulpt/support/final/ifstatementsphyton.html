@@ -77,15 +77,9 @@
     <script src="skulpt-stdlib.js" type="text/javascript"></script>
   </head>
   
-  <body>
+<body>
     
-	<!--
-      <a class="navbar-brand" href="elearning.jpg">
-        <img alt="Brand" src="">
-      </a>
-   -->
-   
-   <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
 	<div class="container-fluid">
   	 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -140,155 +134,141 @@
     </div><!-- /.navbar-collapse -->
   
 	</div><!-- /.container-fluid -->
-  </nav>
-
-<!-- Jumbotron -->
+</nav>
 
 <div class="container text-center">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-12">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" style="text-align:left">    
+
+            <h2> How to print if statements in Phyton</h2>
+            <br> message = "Today's activity" -- (the message will be starting with  “Today’s activity” at the end when its executed ) </br>
+            <br> print ("Please enter the temperature :\n") --  (it will print “Please enter the temperature” )  </br>
+            <br> entered_value = input ()  --  (User will be prompted to enter a value) (</br>
+            <br> if int(entered_value) > 30:  -- (if the entered value greater than 30) </br>
+            <br> message = message + "swimming"  -- (today’s activity equals to swimming)</br>
+            <br> elif int(entered_value) > 20: -- (if the value is greater than 20 but less than 30) </br>
+              <br> message = message + "tennis" --  (todays’s activity equals to tennis) </br>
+            <br> else : message = message + "sleeping"  -- (otherwise anything else equals to  sleeping) </br>
+            <br> print message – (the message will be printed with appropriate sections) </br>
+
+            <h1> Full Code </h1>
+            <br> message = "Today's activity";
+            <br> print ("Please enter the temperature :\n");
+            <br> entered_value = input();
+            <br> if int(entered_value) > 30:
+            <br> &nbsp; message = message + "swimming";
+            <br> elif int(entered_value) > 20:
+            <br> &nbsp; message = message + "tennis";
+            <br> else : message = message + "sleeping";
+            <br> print message;
+            </br>
+            <br> Please make sure the code is lower cased and try to change the code to print different words or sentences.</br>
+             
+            <script type="text/javascript">
+              function outf(text) {
+                 var mypre = document.getElementById(Sk.pre);
+                 mypre.innerHTML = mypre.innerHTML + text;
+              }
+
+              function showjs(text) {
+                 var mypre = document.getElementById("runbrowser_jsout");
+                 mypre.innerHTML = mypre.innerHTML + text;
+              }
 
 
-<div class="row">
-<div class="col-md-12">
-
-<div class="col-md-12">
-
-<div class="col-md-3"></div>
-<div class="col-md-6" style="text-align:left">    
-    <h2> How to print if statements in Phyton</h2>
-    <br> message = "Today's activity" --  (the message will be starting with  “Today’s activity” at the end when its executed ) </br>
-    <br> print ("Please enter the temperature :\n") --  (it will print “Please enter the temperature” )  </br>
-    <br> entered_value = input ()  --  (User will be prompted to enter a value) (</br>
-    <br> if int(entered_value) > 30:  -- (if the entered value greater than 30) </br>
-       <br> message = message + "swimming"  -- (today’s activity equals to swimming)</br>
-    <br> elif int(entered_value) > 20: -- (if the value is greater than 20 but less than 30) </br>
-      <br> message = message + "tennis" --  (todays’s activity equals to tennis) </br>
-    <br> else : message = message + "sleeping"  -- (otherwise anything else equals to  sleeping) </br>
-    <br> print message – (the message will be printed with appropriate sections) </br>
-    <h1> Full Code </h1>
-    <br>
-    message = "Today's activity";
-    <br>
-    print ("Please enter the temperature :\n");
-    <br>
-    entered_value = input ();
-    <br>
-    if int(entered_value) > 30:
-    <br>
-    &nbsp; message = message + "swimming";
-    <br>
-    elif int(entered_value) > 20:
-    <br>
-    &nbsp; message = message + "tennis";
-    <br>
-    else : message = message + "sleeping";
-    <br>
-    print message;
-    </br>
-    <br> Please make sure the code is lower cased and try to change the code to print different words or sentences.</br>
-     
-    <script type="text/javascript">
-      function outf(text) {
-         var mypre = document.getElementById(Sk.pre);
-         mypre.innerHTML = mypre.innerHTML + text;
-      }
-
-      function showjs(text) {
-         var mypre = document.getElementById("runbrowser_jsout");
-         mypre.innerHTML = mypre.innerHTML + text;
-      }
-
-
-      function builtinRead(x) {
-          console.log(x);
-          if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
-              throw "File not found: '" + x + "'";
-          }
-
-          var file = Sk.builtinFiles["files"][x];
-
-          if (!file) {
-              return new Promise(function (accept, reject) {
-                  function reqListener () {
-                      console.log(this);
-                      console.log(arguments)
-                      accept(this.responseText);
+              function builtinRead(x) {
+                  console.log(x);
+                  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+                      throw "File not found: '" + x + "'";
                   }
 
-                  var oReq = new XMLHttpRequest();
-                  oReq.addEventListener("load", reqListener);
-                  oReq.open("GET", "" + file);
-                  oReq.send();
-              });
-          }
+                  var file = Sk.builtinFiles["files"][x];
 
-          return file;
-      }
+                  if (!file) {
+                      return new Promise(function (accept, reject) {
+                          function reqListener () {
+                              console.log(this);
+                              console.log(arguments)
+                              accept(this.responseText);
+                          }
 
-      function runit(myDiv) {
-         var prog = document.getElementById(myDiv+"_code").value;
-         var mypre = document.getElementById(myDiv+"_pre");
+                          var oReq = new XMLHttpRequest();
+                          oReq.addEventListener("load", reqListener);
+                          oReq.open("GET", "" + file);
+                          oReq.send();
+                      });
+                  }
 
-         Sk.inputfun = function(prompt) {
-             return new Promise(function (resolve) { resolve(window.prompt(prompt)); });
-         };
-         //Sk.outputfun = alert;
-
-         mypre.innerHTML = '';
-         Sk.canvas = myDiv+"_canvas";
-          var can = document.getElementById(Sk.canvas);
-          can.style.display = 'block';
-          if (can) {
-              can.width = can.width;
-              if (Sk.tg) {
-                  Sk.tg.canvasInit = false;
-                  Sk.tg.turtleList = [];
+                  return file;
               }
-          }
 
-          Sk.pre = myDiv+"_pre";
-          Sk.configure({
-              output:outf,
-              read: builtinRead,
-              inputfunTakesPrompt: true,
-              debugout: showjs,
-              debugging: false
-          });
+              function runit(myDiv) {
+                 var prog = document.getElementById(myDiv+"_code").value;
+                 var mypre = document.getElementById(myDiv+"_pre");
 
-          var myPromise = Sk.misceval.asyncToPromise(function() {
-                  return Sk.importMainWithBody("<stdin>",true,prog,true);
-          });
+                 Sk.inputfun = function(prompt) {
+                     return new Promise(function (resolve) { resolve(window.prompt(prompt)); });
+                 };
+                 //Sk.outputfun = alert;
 
-          myPromise.then(function(mod) {}, function(err) {
-              console.log(err.toString());
-          });
-      }
-    </script>
+                 mypre.innerHTML = '';
+                 Sk.canvas = myDiv+"_canvas";
+                  var can = document.getElementById(Sk.canvas);
+                  can.style.display = 'block';
+                  if (can) {
+                      can.width = can.width;
+                      if (Sk.tg) {
+                          Sk.tg.canvasInit = false;
+                          Sk.tg.turtleList = [];
+                      }
+                  }
 
-    <br>
+                  Sk.pre = myDiv+"_pre";
+                  Sk.configure({
+                      output:outf,
+                      read: builtinRead,
+                      inputfunTakesPrompt: true,
+                      debugout: showjs,
+                      debugging: false
+                  });
 
-    <div id="runbrowser">
-    <form>
-    <textarea edit_id="eta_5" id="runbrowser_code" cols="72" rows="20" style="font-family: 'Lucida Console', Monaco, monospace;">
+                  var myPromise = Sk.misceval.asyncToPromise(function() {
+                          return Sk.importMainWithBody("<stdin>",true,prog,true);
+                  });
 
-    </textarea>
-    <button onclick="runit('runbrowser')" type="button">Run</button>
-    </form>
+                  myPromise.then(function(mod) {}, function(err) {
+                      console.log(err.toString());
+                  });
+              }
+            </script>
 
-    <h3>Canvas</h3>
-    <div id="runbrowser_canvas" height="500" width="800"
-      style="border-style: solid; display: none"></div>
+            <br>
 
-    <h3>Output</h3>
-    <pre id="runbrowser_pre" style="background-color: #dddddd"></pre>
+            <div id="runbrowser">
+              <form>
+              <textarea edit_id="eta_5" id="runbrowser_code" cols="72" rows="20" style="font-family: 'Lucida Console', Monaco, monospace;">
 
-    <h3 style="display:none">Compiled To Javascript</h3>
-    <pre id="runbrowser_jsout" style="display:none"></pre>
+              </textarea>
+              <button onclick="runit('runbrowser')" type="button">Run</button>
+              </form>
+
+              <h3>Canvas</h3>
+              <div id="runbrowser_canvas" height="500" width="800"
+                style="border-style: solid; display: none"></div>
+
+              <h3>Output</h3>
+              <pre id="runbrowser_pre" style="background-color: #dddddd"></pre>
+
+              <h3 style="display:none">Compiled To Javascript</h3>
+              <pre id="runbrowser_jsout" style="display:none"></pre>
+            </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
   </div>
-  <div class="col-md-3"></div>
-</div>
-
-</div>
-</div>
 </div>
 
 <!-- footer -->
@@ -355,31 +335,7 @@
 
 		</footer>
 	
-	
-	<!-- 
-	<div class="container">
-	<div class="row">
-	<div class="col-md-10">
-	<p> hello  how are you what is you name my name is john nice to met you see you all soon</p>
-	</div>
-	
-	
-	
-	
-	</div>
-	</div>
-	-->
-	
-	
-
-	
-	
-	
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-
-  </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
