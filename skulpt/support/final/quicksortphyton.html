@@ -200,7 +200,7 @@
       <br>&nbsp;quickSortHelper(alist,0,len(alist)-1);
       <br>
       <br>def quickSortHelper(alist,first,last):
-      <br>&nbsp;if first<last:
+      <br>&nbsp;if first &lt; last:
       <br>&nbsp;&nbsp;splitpoint = partition(alist,first,last);
       <br>&nbsp;&nbsp;quickSortHelper(alist,first,splitpoint-1);
       <br>&nbsp;&nbsp;quickSortHelper(alist,splitpoint+1,last);
