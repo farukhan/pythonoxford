@@ -155,9 +155,9 @@
 
         <br>def reverse(value, output=[]):
         <br>#range(start, stop, step)
-        <br>for i in range(len(value) - 1, -1, -1):
-        <br>&nbsp;output.append(value[i]);
-        <br>return "".join(output);
+        <br>&nbsp;for i in range(len(value) - 1, -1, -1):
+        <br>&nbsp;&nbsp;output.append(value[i]);
+        <br>&nbsp;return "".join(output);
         <br>
         <br>text = raw_input("Please enter a text to be reversed: ");
         <br>print("Your reversed text is: {}".format(reverse(text)));
