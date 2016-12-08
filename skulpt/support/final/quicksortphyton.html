@@ -142,220 +142,205 @@
 	</div><!-- /.container-fluid -->
   </nav>
 
-<!-- Jumbotron -->
-
 <div class="container text-center">
-<div class="jumbotron">
-<h1>Python </h1>
-
-<p>Python is a programming language that is used by many professional coders </p>
-<a href ="#" class="btn btn-lg btn-success"> LOGIN/SIGNUP </a>
-</div>
 <div class="row">
 <div class="col-md-12">
-<a href="#" class=thumbnail">
-<img src="img/python.png" alt="Tutorials">
-</a>
 
 <div class="col-md-12">
-<h2> Quick sort in Phyton</h2>
-<br> def quickSort(alist):   </br>
-  <br>  quickSortHelper(alist,0,len(alist)-1) </br>
+<div class="col-md-3"></div>
+<div class="col-md-6" style="text-align:left">    
+      <h2> Quick sort in Phyton</h2>
+      <br> def quickSort(alist):   </br>
+      <br>  quickSortHelper(alist,0,len(alist)-1) </br>
 
-<br> def quickSortHelper(alist,first,last): </br>
-    <br> if first<last: </br>
+      <br> def quickSortHelper(alist,first,last): </br>
+      <br> if first<last: </br>
 
-<br>       splitpoint = partition(alist,first,last) </br>
+      <br>       splitpoint = partition(alist,first,last) </br>
 
-       <br> quickSortHelper(alist,first,splitpoint-1) </br>
-<br>       quickSortHelper(alist,splitpoint+1,last) </br>
+      <br> quickSortHelper(alist,first,splitpoint-1) </br>
+      <br>       quickSortHelper(alist,splitpoint+1,last) </br>
 
 
-<br> def partition(alist,first,last): </br>
-<br>   pivotvalue = alist[first] </br>
+      <br> def partition(alist,first,last): </br>
+      <br>   pivotvalue = alist[first] </br>
 
-  <br>  leftmark = first+1 </br>
-<br>   rightmark = last </br>
+      <br>  leftmark = first+1 </br>
+      <br>   rightmark = last </br>
 
-   <br> done = False </br> 
-<br>   while not done: </br>
+      <br> done = False </br> 
+      <br>   while not done: </br>
 
       <br> while leftmark <= rightmark and alist[leftmark] <= pivotvalue:  </br>
- <br>    leftmark = leftmark + 1 </br>
+      <br>    leftmark = leftmark + 1 </br>
 
       <br>  while alist[rightmark] >= pivotvalue and rightmark >= leftmark: </br>
-          <br>  rightmark = rightmark -1 </br>
+      <br>  rightmark = rightmark -1 </br>
 
-<br>       if rightmark < leftmark: </br>
- <br>          done = True </br>
-       <br> else:  </br>
-          <br> temp = alist[leftmark] </br>
-<br>           alist[leftmark] = alist[rightmark] </br>
-         <br>  alist[rightmark] = temp  </br>
+      <br>       if rightmark < leftmark: </br>
+      <br>          done = True </br>
+      <br> else:  </br>
+      <br> temp = alist[leftmark] </br>
+      <br>           alist[leftmark] = alist[rightmark] </br>
+      <br>  alist[rightmark] = temp  </br>
 
-   <br> temp = alist[first] </br>
-<br>   alist[first] = alist[rightmark] </br>
-  <br> alist[rightmark] = temp </br>
-
-
-  <br> return rightmark </br>
-
-<br> alist = [54,26,93,17,77,31,44,10,20] </br>
-<br>   quickSort(alist) </br>
-<br>  print(alist) </br>
-  <h1> Full Code </h1>
-
-<br>def quickSort(alist):
-<br>&nbsp; quickSortHelper(alist,0,len(alist)-1);
-
-<br>def quickSortHelper(alist,first,last):
-<br>&nbsp; "if first<last:"
-<br>&nbsp; splitpoint = partition(alist,first,last);
-<br>&nbsp; quickSortHelper(alist,first,splitpoint-1);
-<br>&nbsp; quickSortHelper(alist,splitpoint+1,last);
+      <br> temp = alist[first] </br>
+      <br>   alist[first] = alist[rightmark] </br>
+      <br> alist[rightmark] = temp </br>
 
 
-<br>def partition(alist,first,last):
-<br>&nbsp;   pivotvalue = alist[first];
-<br>&nbsp;   leftmark = first+1;
-<br>&nbsp;   rightmark = last;
-<br>&nbsp;   done = False;
+      <br> return rightmark </br>
 
-<br>   while not done:
-<br>&nbsp;       while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
-<br>&nbsp;&nbsp;           leftmark = leftmark + 1;
+      <br> alist = [54,26,93,17,77,31,44,10,20] </br>
+      <br>   quickSort(alist) </br>
+      <br>  print(alist) </br>
+      <h1> Full Code </h1>
 
-<br>&nbsp;       while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
-<br>&nbsp;&nbsp;           rightmark = rightmark -1;
+      <br>def quickSort(alist):
+      <br>&nbsp; quickSortHelper(alist,0,len(alist)-1);
 
-<br>&nbsp; if rightmark < leftmark:
-<br>&nbsp;&nbsp;  done = True;
-<br>&nbsp; else:
-<br>&nbsp;&nbsp;  temp = alist[leftmark];
-<br>&nbsp;&nbsp;  alist[leftmark] = alist[rightmark];
-<br>&nbsp;&nbsp;  alist[rightmark] = temp;
-
-<br>&nbsp; temp = alist[first];
-<br>&nbsp; alist[first] = alist[rightmark];
-<br>&nbsp; alist[rightmark] = temp;
-<br>&nbsp; return rightmark;
-
-<br> alist = [54,26,93,17,77,31,44,55,20];
-<br> quickSort(alist);
-<br> print(alist);
-
-<br> Please make sure the code is lower cased and try to change the code to print different words or sentences.</br>
- 
-<script type="text/javascript">
-function outf(text) {
-   var mypre = document.getElementById(Sk.pre);
-   mypre.innerHTML = mypre.innerHTML + text;
-}
-
-function showjs(text) {
-   var mypre = document.getElementById("runbrowser_jsout");
-   mypre.innerHTML = mypre.innerHTML + text;
-}
+      <br>def quickSortHelper(alist,first,last):
+      <br>&nbsp; "if first<last:"
+      <br>&nbsp; splitpoint = partition(alist,first,last);
+      <br>&nbsp; quickSortHelper(alist,first,splitpoint-1);
+      <br>&nbsp; quickSortHelper(alist,splitpoint+1,last);
 
 
-function builtinRead(x) {
-    console.log(x);
-    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
-        throw "File not found: '" + x + "'";
-    }
+      <br>def partition(alist,first,last):
+      <br>&nbsp;   pivotvalue = alist[first];
+      <br>&nbsp;   leftmark = first+1;
+      <br>&nbsp;   rightmark = last;
+      <br>&nbsp;   done = False;
 
-    var file = Sk.builtinFiles["files"][x];
+      <br>   while not done:
+      <br>&nbsp;       while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
+      <br>&nbsp;&nbsp;           leftmark = leftmark + 1;
 
-    if (!file) {
-        return new Promise(function (accept, reject) {
-            function reqListener () {
-                console.log(this);
-                console.log(arguments)
-                accept(this.responseText);
+      <br>&nbsp;       while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
+      <br>&nbsp;&nbsp;           rightmark = rightmark -1;
+
+      <br>&nbsp; if rightmark < leftmark:
+      <br>&nbsp;&nbsp;  done = True;
+      <br>&nbsp; else:
+      <br>&nbsp;&nbsp;  temp = alist[leftmark];
+      <br>&nbsp;&nbsp;  alist[leftmark] = alist[rightmark];
+      <br>&nbsp;&nbsp;  alist[rightmark] = temp;
+
+      <br>&nbsp; temp = alist[first];
+      <br>&nbsp; alist[first] = alist[rightmark];
+      <br>&nbsp; alist[rightmark] = temp;
+      <br>&nbsp; return rightmark;
+
+      <br> alist = [54,26,93,17,77,31,44,55,20];
+      <br> quickSort(alist);
+      <br> print(alist);
+
+      <br> Please make sure the code is lower cased and try to change the code to print different words or sentences.</br>
+     
+      <script type="text/javascript">
+        function outf(text) {
+           var mypre = document.getElementById(Sk.pre);
+           mypre.innerHTML = mypre.innerHTML + text;
+        }
+
+        function showjs(text) {
+           var mypre = document.getElementById("runbrowser_jsout");
+           mypre.innerHTML = mypre.innerHTML + text;
+        }
+
+
+        function builtinRead(x) {
+            console.log(x);
+            if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+                throw "File not found: '" + x + "'";
             }
 
-            var oReq = new XMLHttpRequest();
-            oReq.addEventListener("load", reqListener);
-            oReq.open("GET", "" + file);
-            oReq.send();
-        });
-    }
+            var file = Sk.builtinFiles["files"][x];
 
-    return file;
-}
+            if (!file) {
+                return new Promise(function (accept, reject) {
+                    function reqListener () {
+                        console.log(this);
+                        console.log(arguments)
+                        accept(this.responseText);
+                    }
 
-function runit(myDiv) {
-   var prog = document.getElementById(myDiv+"_code").value;
-   var mypre = document.getElementById(myDiv+"_pre");
+                    var oReq = new XMLHttpRequest();
+                    oReq.addEventListener("load", reqListener);
+                    oReq.open("GET", "" + file);
+                    oReq.send();
+                });
+            }
 
-   Sk.inputfun = function(prompt) {
-       return new Promise(function (resolve) { resolve(window.prompt(prompt)); });
-   };
-   //Sk.outputfun = alert;
-
-   mypre.innerHTML = '';
-   Sk.canvas = myDiv+"_canvas";
-    var can = document.getElementById(Sk.canvas);
-    can.style.display = 'block';
-    if (can) {
-        can.width = can.width;
-        if (Sk.tg) {
-            Sk.tg.canvasInit = false;
-            Sk.tg.turtleList = [];
+            return file;
         }
-    }
 
-    Sk.pre = myDiv+"_pre";
-    Sk.configure({
-        output:outf,
-        read: builtinRead,
-        inputfunTakesPrompt: true,
-        debugout: showjs,
-        debugging: false
-    });
+        function runit(myDiv) {
+           var prog = document.getElementById(myDiv+"_code").value;
+           var mypre = document.getElementById(myDiv+"_pre");
 
-    var myPromise = Sk.misceval.asyncToPromise(function() {
-            return Sk.importMainWithBody("<stdin>",true,prog,true);
-    });
+           Sk.inputfun = function(prompt) {
+               return new Promise(function (resolve) { resolve(window.prompt(prompt)); });
+           };
+           //Sk.outputfun = alert;
 
-    myPromise.then(function(mod) {}, function(err) {
-        console.log(err.toString());
-    });
-}
-</script>
+           mypre.innerHTML = '';
+           Sk.canvas = myDiv+"_canvas";
+            var can = document.getElementById(Sk.canvas);
+            can.style.display = 'block';
+            if (can) {
+                can.width = can.width;
+                if (Sk.tg) {
+                    Sk.tg.canvasInit = false;
+                    Sk.tg.turtleList = [];
+                }
+            }
 
+            Sk.pre = myDiv+"_pre";
+            Sk.configure({
+                output:outf,
+                read: builtinRead,
+                inputfunTakesPrompt: true,
+                debugout: showjs,
+                debugging: false
+            });
 
+            var myPromise = Sk.misceval.asyncToPromise(function() {
+                    return Sk.importMainWithBody("<stdin>",true,prog,true);
+            });
+
+            myPromise.then(function(mod) {}, function(err) {
+                console.log(err.toString());
+            });
+        }
+      </script>
+
+      <div id="runbrowser">
+        <form>
+        <textarea edit_id="eta_5" id="runbrowser_code" cols="72" rows="20" style="font-family: 'Lucida Console', Monaco, monospace;">
+
+        </textarea>
+        <button onclick="runit('runbrowser')" type="button">Run</button>
+        </form>
+
+        <h3>Canvas</h3>
+        <div id="runbrowser_canvas" height="500" width="800"
+          style="border-style: solid; display: none"></div>
+
+        <h3>Output</h3>
+        <pre id="runbrowser_pre" style="background-color: #dddddd"></pre>
+
+        <h3 style="display:none">Compiled To Javascript</h3>
+        <pre id="runbrowser_jsout" style="display:none"></pre>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+
+    </div>
+  </div>
 </div>
 
-</div>
-
-</div>
-
-
-
-<div id="runbrowser">
-<form>
-<textarea edit_id="eta_5" id="runbrowser_code" cols="72" rows="20" style="font-family: 'Lucida Console', Monaco, monospace;">
-
-</textarea>
-<button onclick="runit('runbrowser')" type="button">Run</button>
-</form>
-
-<h3>Canvas</h3>
-<div id="runbrowser_canvas" height="500" width="800"
-	style="border-style: solid; display: none"></div>
-
-<h3>Output</h3>
-<pre id="runbrowser_pre" style="background-color: #dddddd"></pre>
-
-<h3>Compiled To Javascript</h3>
-<pre id="runbrowser_jsout"></pre>
-
-</div>
-
-
-
-<!-- footer -->
+  <!-- footer -->
 
 		<footer class="footer-distributed">
 
@@ -418,32 +403,7 @@ function runit(myDiv) {
 			</div>
 
 		</footer>
-	
-	
-	<!-- 
-	<div class="container">
-	<div class="row">
-	<div class="col-md-10">
-	<p> hello  how are you what is you name my name is john nice to met you see you all soon</p>
-	</div>
-	
-	
-	
-	
-	</div>
-	</div>
-	-->
-	
-	
-
-	
-	
-	
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-
-  </html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
