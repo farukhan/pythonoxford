@@ -242,17 +242,17 @@
 				<div id="runbrowser">
 				  <textarea edit_id="eta_5" id="runbrowser_code" rows="20" cols="60" style="font-family: 'Lucida Console', Monaco, monospace;">def quickSort(alist): &#13;&#10; quickSortHelper(alist,0,len(alist)-1);
       
-      				def quickSortHelper(alist,first,last): &#13;&#10;
-      				 if first &lt; last: &#13;&#10;
-      				  splitpoint = partition(alist,first,last); &#13;&#10;
-      				  quickSortHelper(alist,first,splitpoint-1); &#13;&#10;
-      				  quickSortHelper(alist,splitpoint+1,last); &#13;&#10;
+def quickSortHelper(alist,first,last): &#13;&#10;
+ if first &lt; last: &#13;&#10;
+  splitpoint = partition(alist,first,last); &#13;&#10;
+  quickSortHelper(alist,first,splitpoint-1); &#13;&#10;
+  quickSortHelper(alist,splitpoint+1,last); &#13;&#10;
         
-      def partition(alist,first,last):
-      &nbsp;pivotvalue = alist[first];
-      &nbsp;leftmark = first+1;
-      &nbsp;rightmark = last;
-      &nbsp;done = False;
+def partition(alist,first,last): &#13;&#10;
+ pivotvalue = alist[first]; &#13;&#10;
+ leftmark = first+1; &#13;&#10;
+ rightmark = last; &#13;&#10;
+ done = False; &#13;&#10;
       
       &nbsp;while not done:
       &nbsp;&nbsp;while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
