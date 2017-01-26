@@ -148,6 +148,7 @@
 
 <div class="col-md-12">
 <div class="col-md-3"></div>
+
 <div class="col-md-6" style="text-align:left">    
       <h2> Quick sort in Phyton</h2>
       <br> def quickSort(alist):   </br>
@@ -239,14 +240,15 @@
 		<div class="col-md-12 col-lg-12">
 			<div class="col-md-6 col-lg-6">
 				<div id="runbrowser">
-				  <textarea edit_id="eta_5" id="runbrowser_code" rows="20" cols="30" style="font-family: 'Lucida Console', Monaco, monospace;">  def quickSort(alist):
-      &nbsp;quickSortHelper(alist,0,len(alist)-1);
+				  <textarea edit_id="eta_5" id="runbrowser_code" rows="20" cols="60" style="font-family: 'Lucida Console', Monaco, monospace;">  
+				  	def quickSort(alist):
+      				&nbsp;quickSortHelper(alist,0,len(alist)-1);
       
-      def quickSortHelper(alist,first,last):
-      &nbsp;if first &lt; last:
-      &nbsp;&nbsp;splitpoint = partition(alist,first,last);
-      &nbsp;&nbsp;quickSortHelper(alist,first,splitpoint-1);
-      &nbsp;&nbsp;quickSortHelper(alist,splitpoint+1,last);
+      				def quickSortHelper(alist,first,last):
+      				&nbsp;if first &lt; last:
+      				&nbsp;&nbsp;splitpoint = partition(alist,first,last);
+      				&nbsp;&nbsp;quickSortHelper(alist,first,splitpoint-1);
+      				&nbsp;&nbsp;quickSortHelper(alist,splitpoint+1,last);
         
       def partition(alist,first,last):
       &nbsp;pivotvalue = alist[first];
@@ -362,9 +364,11 @@
 				  }
 				</script>
 			</div>
+
 			<div class="col-md-6 col-lg-6">
 				  <pre id="runbrowser_pre" style="background-color: #dddddd"></pre> 
 			</div> 			
+
 		</div>    
 
         <br>
