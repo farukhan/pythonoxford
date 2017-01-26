@@ -256,17 +256,17 @@ def partition(alist,first,last):
  while not done:
   while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
    leftmark = leftmark + 1;
-   while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
-    rightmark = rightmark -1;
-    if rightmark < leftmark:
-     done = True;
-    else:
-     temp = alist[leftmark];
-     alist[leftmark] = alist[rightmark];
-     alist[rightmark] = temp;
-    temp = alist[first];
-    alist[first] = alist[rightmark];
+  while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
+   rightmark = rightmark -1;
+  if rightmark < leftmark:
+    done = True;
+  else:
+    temp = alist[leftmark];
+    alist[leftmark] = alist[rightmark];
     alist[rightmark] = temp;
+  temp = alist[first];
+  alist[first] = alist[rightmark];
+  alist[rightmark] = temp;
  return rightmark;
 
 alist = [54,26,93,17,77,31,44,55,20];
