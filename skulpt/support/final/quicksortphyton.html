@@ -148,6 +148,7 @@
 
 <div class="col-md-12">
 <div class="col-md-3"></div>
+
 <div class="col-md-6" style="text-align:left">    
       <h2> Quick sort in Phyton</h2>
       <br> def quickSort(alist):   </br>
@@ -237,46 +238,40 @@
 
       </div>
 		<div class="col-md-12 col-lg-12">
-			<div class="col-md-6 col-lg-6">
+			<div class="col-md-6 col-lg-8">
 				<div id="runbrowser">
-				  <textarea edit_id="eta_5" id="runbrowser_code" rows="20" cols="30" style="font-family: 'Lucida Console', Monaco, monospace;">  def quickSort(alist):
-      &nbsp;quickSortHelper(alist,0,len(alist)-1);
+				  <textarea edit_id="eta_5" id="runbrowser_code" rows="20" cols="75" style="font-family: 'Lucida Console', Monaco, monospace;">def quickSort(alist): &#13;&#10; quickSortHelper(alist,0,len(alist)-1);
       
-      def quickSortHelper(alist,first,last):
-      &nbsp;if first &lt; last:
-      &nbsp;&nbsp;splitpoint = partition(alist,first,last);
-      &nbsp;&nbsp;quickSortHelper(alist,first,splitpoint-1);
-      &nbsp;&nbsp;quickSortHelper(alist,splitpoint+1,last);
+def quickSortHelper(alist,first,last):
+ if first &lt; last:
+  splitpoint = partition(alist,first,last);
+  quickSortHelper(alist,first,splitpoint-1);
+  quickSortHelper(alist,splitpoint+1,last);
         
-      def partition(alist,first,last):
-      &nbsp;pivotvalue = alist[first];
-      &nbsp;leftmark = first+1;
-      &nbsp;rightmark = last;
-      &nbsp;done = False;
-      
-      &nbsp;while not done:
-      &nbsp;&nbsp;while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
-      &nbsp;&nbsp;&nbsp;leftmark = leftmark + 1;
-      
-      &nbsp;&nbsp;while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
-      &nbsp;&nbsp;&nbsp;rightmark = rightmark -1;
-      
-      &nbsp;&nbsp;if rightmark < leftmark:
-      &nbsp;&nbsp;&nbsp;done = True;
-      &nbsp;&nbsp;else:
-      &nbsp;&nbsp;&nbsp;temp = alist[leftmark];
-      &nbsp;&nbsp;&nbsp;alist[leftmark] = alist[rightmark];
-      &nbsp;&nbsp;&nbsp;alist[rightmark] = temp;
-        
-      &nbsp; temp = alist[first];
-      &nbsp; alist[first] = alist[rightmark];
-      &nbsp; alist[rightmark] = temp;
-      
-      &nbsp; return rightmark;
+def partition(alist,first,last):
+ pivotvalue = alist[first];
+ leftmark = first+1;
+ rightmark = last;
+ done = False;
+ while not done:
+  while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
+   leftmark = leftmark + 1;
+  while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
+   rightmark = rightmark -1;
+  if rightmark < leftmark:
+    done = True;
+  else:
+    temp = alist[leftmark];
+    alist[leftmark] = alist[rightmark];
+    alist[rightmark] = temp;
+  temp = alist[first];
+  alist[first] = alist[rightmark];
+  alist[rightmark] = temp;
+ return rightmark;
 
-      alist = [54,26,93,17,77,31,44,55,20];
-      quickSort(alist);
-      print(alist);
+alist = [54,26,93,17,77,31,44,55,20];
+quickSort(alist);
+print(alist);
 				  </textarea>
 				  <br>
 				  <button onclick="runit('runbrowser')" type="button">Run</button>
@@ -362,9 +357,11 @@
 				  }
 				</script>
 			</div>
-			<div class="col-md-6 col-lg-6">
+
+			<div class="col-md-6 col-lg-4">
 				  <pre id="runbrowser_pre" style="background-color: #dddddd"></pre> 
 			</div> 			
+
 		</div>    
 
         <br>
