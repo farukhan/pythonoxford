@@ -162,109 +162,109 @@
           print 'Hi, %s.' % name;
            </br>
           <br> Please make sure the code is lower cased and try to change the code to print different words or sentences.</br>
-         </div>
-   <div class="col-md-12 col-lg-12">
-			<div class="col-md-6 col-lg-6">
-				<div id="runbrowser">
-				  <textarea edit_id="eta_5" id="runbrowser_code" rows="20" cols="30" style="font-family: 'Lucida Console', Monaco, monospace;">&#013;&#010;name = raw_input('What is your name?\n')&#013;&#010;print 'Hi, %s.' % name;
-				  </textarea>
-				  <br>
-				  <button onclick="runit('runbrowser')" type="button">Run</button>
-				  <br>
-				  <div id="runbrowser_canvas" style="display:none"></div>
-				  <pre id="runbrowser_jsout" style="display:none"></pre>
-				</div>
-			
-				<script type="text/javascript">
-				  function outf(text) {
-					 var mypre = document.getElementById(Sk.pre);
-					 mypre.innerHTML = mypre.innerHTML + text;
-				  }
+         
+          <script type="text/javascript">
+            function outf(text) {
+               var mypre = document.getElementById(Sk.pre);
+               mypre.innerHTML = mypre.innerHTML + text;
+            }
 
-				  function showjs(text) {
-					 var mypre = document.getElementById("runbrowser_jsout");
-					 mypre.innerHTML = mypre.innerHTML + text;
-				  }
+            function showjs(text) {
+               var mypre = document.getElementById("runbrowser_jsout");
+               mypre.innerHTML = mypre.innerHTML + text;
+            }
 
-				  function builtinRead(x) {
-					  console.log(x);
-					  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
-						  throw "File not found: '" + x + "'";
-					  }
+            function builtinRead(x) {
+                console.log(x);
+                if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+                    throw "File not found: '" + x + "'";
+                }
 
-					  var file = Sk.builtinFiles["files"][x];
+                var file = Sk.builtinFiles["files"][x];
 
-					  if (!file) {
-						  return new Promise(function (accept, reject) {
-							  function reqListener () {
-								  console.log(this);
-								  console.log(arguments)
-								  accept(this.responseText);
-							  }
+                if (!file) {
+                    return new Promise(function (accept, reject) {
+                        function reqListener () {
+                            console.log(this);
+                            console.log(arguments)
+                            accept(this.responseText);
+                        }
 
-							  var oReq = new XMLHttpRequest();
-							  oReq.addEventListener("load", reqListener);
-							  oReq.open("GET", "" + file);
-							  oReq.send();
-						  });
-					  }
+                        var oReq = new XMLHttpRequest();
+                        oReq.addEventListener("load", reqListener);
+                        oReq.open("GET", "" + file);
+                        oReq.send();
+                    });
+                }
 
-					  return file;
-				  }
+                return file;
+            }
 
-				  function runit(myDiv) {
-					 var prog = document.getElementById(myDiv+"_code").value;
-					 var mypre = document.getElementById(myDiv+"_pre");
+            function runit(myDiv) {
+               var prog = document.getElementById(myDiv+"_code").value;
+               var mypre = document.getElementById(myDiv+"_pre");
 
-					 Sk.inputfun = function(prompt) {
-						 return new Promise(function (resolve) { resolve(window.prompt(prompt)); });
-					 };
-					 //Sk.outputfun = alert;
+               Sk.inputfun = function(prompt) {
+                   return new Promise(function (resolve) { resolve(window.prompt(prompt)); });
+               };
+               //Sk.outputfun = alert;
 
-					 mypre.innerHTML = '';
-					 Sk.canvas = myDiv+"_canvas";
-					  var can = document.getElementById(Sk.canvas);
-					  can.style.display = 'block';
-					  if (can) {
-						  can.width = can.width;
-						  if (Sk.tg) {
-							  Sk.tg.canvasInit = false;
-							  Sk.tg.turtleList = [];
-						  }
-					  }
+               mypre.innerHTML = '';
+               Sk.canvas = myDiv+"_canvas";
+                var can = document.getElementById(Sk.canvas);
+                can.style.display = 'block';
+                if (can) {
+                    can.width = can.width;
+                    if (Sk.tg) {
+                        Sk.tg.canvasInit = false;
+                        Sk.tg.turtleList = [];
+                    }
+                }
 
-					  Sk.pre = myDiv+"_pre";
-					  Sk.configure({
-						  output:outf,
-						  read: builtinRead,
-						  inputfunTakesPrompt: true,
-						  debugout: showjs,
-						  debugging: false
-					  });
+                Sk.pre = myDiv+"_pre";
+                Sk.configure({
+                    output:outf,
+                    read: builtinRead,
+                    inputfunTakesPrompt: true,
+                    debugout: showjs,
+                    debugging: false
+                });
 
-					  var myPromise = Sk.misceval.asyncToPromise(function() {
-							  return Sk.importMainWithBody("<stdin>",true,prog,true);
-					  });
+                var myPromise = Sk.misceval.asyncToPromise(function() {
+                        return Sk.importMainWithBody("<stdin>",true,prog,true);
+                });
 
-					  myPromise.then(function(mod) {}, function(err) {
-						  console.log(err.toString());
-					  });
-				  }
-				</script>
-			</div>
-			<div class="col-md-6 col-lg-6">
-				  <pre id="runbrowser_pre" style="background-color: #dddddd"></pre> 
-			</div> 			
-		</div>    
+                myPromise.then(function(mod) {}, function(err) {
+                    console.log(err.toString());
+                });
+            }
+          </script>
 
-        <br>
-      </div>    
-      <div class="col-md-2"></div>    
+          <br>
+
+          <div id="runbrowser">
+            <form>
+                <textarea edit_id="eta_5" id="runbrowser_code" cols="72" rows="20" style="font-family: 'Lucida Console', Monaco, monospace;">
+                </textarea>
+                <button onclick="runit('runbrowser')" type="button">Run</button>
+            </form>
+
+            <h3>Canvas</h3>
+            <div id="runbrowser_canvas" height="500" width="800"
+              style="border-style: solid; display: none"></div>
+
+            <h3>Output</h3>
+            <pre id="runbrowser_pre" style="background-color: #dddddd"></pre>
+
+            <h3 style="display:none">Compiled To Javascript</h3>
+            <pre id="runbrowser_jsout" style="display:none"></pre>
+          </div>
+          
+        </div>
+        <div class="col-md-3"></div>
+      </div>
     </div>
-  </div>
 </div>
-
-
 
 <!-- footer -->
 
@@ -331,15 +331,14 @@
 		</footer>
 	
 	
-	<!-- 
-	<div class="container">
-	<div class="row">
-	<div class="col-md-10">
-	<p> hello  how are you what is you name my name is john nice to met you see you all soon</p>
-	</div>
-	</div>
-	</div>
-	-->
+
+	
+	
+
+	
+	
+	
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
