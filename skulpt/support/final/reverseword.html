@@ -150,7 +150,15 @@
       <div class="col-md-6" style="text-align:left">
         <h2> Reverse Word</h2>
         <p> In this section, we will see with an example on how to print user inserted word in reverse </p>
-</div>
+<br> def reverse(value, output=[]): <br>
+<br>#range(start, stop, step) <br>
+ <br>for i in range(len(value) - 1, -1, -1): <br>
+  <br>output.append(value[i]); <br>
+ <br>return "".join(output); <br>
+
+<br>text = raw_input("Please enter a text to be reversed: ");<br> 
+<br> print("Your reversed text is: {}".format(reverse(text))); <br>
+		</div>
 		<div class="col-md-12 col-lg-12">
 			<div class="col-md-6 col-lg-6">
 				<div id="runbrowser">
