@@ -152,121 +152,118 @@
         <div class="col-md-6" style="text-align:left">
           <h2>Number to Binary</h2>
           <p>In this section, we will see with an example on how to convert number to binary number </p>
+</div>
+         <div class="col-md-12 col-lg-12">
+			<div class="col-md-6 col-lg-6">
+				<div id="runbrowser">
+				  <textarea edit_id="eta_5" id="runbrowser_code" rows="20" cols="30" style="font-family: 'Lucida Console', Monaco, monospace;">
+				decimal = int(raw_input("Number in decimal format: ")) 
 
-          <br>decimal = int(raw_input("Number in decimal format: "))
-          <br>
-          <br>def binary(n):
-          <br>&nbsp;output = ""
-          <br>&nbsp;while n > 0:
-          <br>&nbsp;&nbsp;output = "{}{}".format(n % 2, output);
-          <br>&nbsp;&nbsp;n = n // 2;
-          <br>&nbsp;return output;
-          <br>
-          <br>print(binary(decimal));
+def binary(n): 
+ output = "" 
+ while n > 0: 
+  output = "{}{}".format(n % 2, output); 
+  n = n // 2; 
+ return output; 
 
-          <script type="text/javascript">
-            
-            function outf(text) {
-             var mypre = document.getElementById(Sk.pre);
-             mypre.innerHTML = mypre.innerHTML + text;
-            }
+print(binary(decimal));
+				  </textarea>
+				  <br>
+				  <button onclick="runit('runbrowser')" type="button">Run</button>
+				  <br>
+				  <div id="runbrowser_canvas" style="display:none"></div>
+				  <pre id="runbrowser_jsout" style="display:none"></pre>
+				</div>
+			
+				<script type="text/javascript">
+				  function outf(text) {
+					 var mypre = document.getElementById(Sk.pre);
+					 mypre.innerHTML = mypre.innerHTML + text;
+				  }
 
-            function showjs(text) {
-               var mypre = document.getElementById("runbrowser_jsout");
-               mypre.innerHTML = mypre.innerHTML + text;
-            }
+				  function showjs(text) {
+					 var mypre = document.getElementById("runbrowser_jsout");
+					 mypre.innerHTML = mypre.innerHTML + text;
+				  }
 
-            function builtinRead(x) {
-                console.log(x);
-                if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
-                    throw "File not found: '" + x + "'";
-                }
+				  function builtinRead(x) {
+					  console.log(x);
+					  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+						  throw "File not found: '" + x + "'";
+					  }
 
-                var file = Sk.builtinFiles["files"][x];
+					  var file = Sk.builtinFiles["files"][x];
 
-                if (!file) {
-                    return new Promise(function (accept, reject) {
-                        function reqListener () {
-                            console.log(this);
-                            console.log(arguments)
-                            accept(this.responseText);
-                        }
+					  if (!file) {
+						  return new Promise(function (accept, reject) {
+							  function reqListener () {
+								  console.log(this);
+								  console.log(arguments)
+								  accept(this.responseText);
+							  }
 
-                        var oReq = new XMLHttpRequest();
-                        oReq.addEventListener("load", reqListener);
-                        oReq.open("GET", "" + file);
-                        oReq.send();
-                    });
-                }
-                return file;
-            }
+							  var oReq = new XMLHttpRequest();
+							  oReq.addEventListener("load", reqListener);
+							  oReq.open("GET", "" + file);
+							  oReq.send();
+						  });
+					  }
 
-            function runit(myDiv) {
-               var prog = document.getElementById(myDiv+"_code").value;
-               var mypre = document.getElementById(myDiv+"_pre");
+					  return file;
+				  }
 
-               Sk.inputfun = function(prompt) {
-                   return new Promise(function (resolve) { resolve(window.prompt(prompt)); });
-               };
-               //Sk.outputfun = alert;
+				  function runit(myDiv) {
+					 var prog = document.getElementById(myDiv+"_code").value;
+					 var mypre = document.getElementById(myDiv+"_pre");
 
-               mypre.innerHTML = '';
-               Sk.canvas = myDiv+"_canvas";
-                var can = document.getElementById(Sk.canvas);
-                can.style.display = 'block';
-                if (can) {
-                    can.width = can.width;
-                    if (Sk.tg) {
-                        Sk.tg.canvasInit = false;
-                        Sk.tg.turtleList = [];
-                    }
-                }
+					 Sk.inputfun = function(prompt) {
+						 return new Promise(function (resolve) { resolve(window.prompt(prompt)); });
+					 };
+					 //Sk.outputfun = alert;
 
-                Sk.pre = myDiv+"_pre";
-                Sk.configure({
-                    output:outf,
-                    read: builtinRead,
-                    inputfunTakesPrompt: true,
-                    debugout: showjs,
-                    debugging: false
-                });
+					 mypre.innerHTML = '';
+					 Sk.canvas = myDiv+"_canvas";
+					  var can = document.getElementById(Sk.canvas);
+					  can.style.display = 'block';
+					  if (can) {
+						  can.width = can.width;
+						  if (Sk.tg) {
+							  Sk.tg.canvasInit = false;
+							  Sk.tg.turtleList = [];
+						  }
+					  }
 
-                var myPromise = Sk.misceval.asyncToPromise(function() {
-                        return Sk.importMainWithBody("<stdin>",true,prog,true);
-                });
+					  Sk.pre = myDiv+"_pre";
+					  Sk.configure({
+						  output:outf,
+						  read: builtinRead,
+						  inputfunTakesPrompt: true,
+						  debugout: showjs,
+						  debugging: false
+					  });
 
-                myPromise.then(function(mod) {}, function(err) {
-                    console.log(err.toString());
-                });
-            }
-          </script>
-        
-          <br>
+					  var myPromise = Sk.misceval.asyncToPromise(function() {
+							  return Sk.importMainWithBody("<stdin>",true,prog,true);
+					  });
 
-          <div id="runbrowser">
-            <form>
-            <textarea edit_id="eta_5" id="runbrowser_code" cols="72" rows="20" style="font-family: 'Lucida Console', Monaco, monospace;">
+					  myPromise.then(function(mod) {}, function(err) {
+						  console.log(err.toString());
+					  });
+				  }
+				</script>
+			</div>
+			<div class="col-md-6 col-lg-6">
+				  <pre id="runbrowser_pre" style="background-color: #dddddd"></pre> 
+			</div> 			
+		</div>    
 
-            </textarea>
-            <button onclick="runit('runbrowser')" type="button">Run</button>
-            </form>
-
-            <h3>Canvas</h3>
-            <div id="runbrowser_canvas" height="500" width="800"
-              style="border-style: solid; display: none"></div>
-
-            <h3>Output</h3>
-            <pre id="runbrowser_pre" style="background-color: #dddddd"></pre>
-
-            <h3 style="display:none">Compiled To Javascript</h3>
-            <pre id="runbrowser_jsout" style="display:none"></pre>
-        </div>
-
-      </div>  
-      <div class="col-md-3"></div>
+        <br>
+      </div>    
+      <div class="col-md-2"></div>    
     </div>
   </div>
 </div>
+
 
 
 <!-- footer -->
@@ -332,6 +329,8 @@
 			</div>
 
 		</footer>
+	
+	
 	<!-- 
 	<div class="container">
 	<div class="row">
@@ -341,7 +340,6 @@
 	</div>
 	</div>
 	-->
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
