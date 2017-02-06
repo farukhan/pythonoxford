@@ -152,7 +152,17 @@
         <div class="col-md-6" style="text-align:left">
           <h2>Number to Binary</h2>
           <p>In this section, we will see with an example on how to convert number to binary number </p>
-</div>
+<br>decimal = int(raw_input("Number in decimal format: ")) <br>
+
+<br>def binary(n): 
+ output = "" 
+ while n > 0: 
+  output = "{}{}".format(n % 2, output); 
+  n = n // 2; 
+ return output; <br>
+
+<br> print(binary(decimal)); <br>
+		  </div>
          <div class="col-md-12 col-lg-12">
 			<div class="col-md-6 col-lg-6">
 				<div id="runbrowser">
